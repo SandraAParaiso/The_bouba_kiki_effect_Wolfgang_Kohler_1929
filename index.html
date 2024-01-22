@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Experimento</title>
+</head>
+<body>
+    <h1>Resultados del Experimento</h1>
+    <pre id="output"></pre>
+
+    <script>
+        // Cargar el contenido del archivo en el elemento 'output'
+        fetch('resultados.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').textContent = data;
+            });
+    </script>
+</body>
+</html>
